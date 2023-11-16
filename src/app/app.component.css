@@ -1,0 +1,18 @@
+.productContainer
+{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+   
+}
+p{
+    text-align: center;
+    color: rgb(255, 0, 0);
+}
+.font{
+    color:rgb(37, 94, 75)
+}
+.header{
+    text-align: center;
+    color: rgb(226, 43, 46);
+    text-decoration:line-through;
+}

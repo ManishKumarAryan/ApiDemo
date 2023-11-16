@@ -1,0 +1,13 @@
+<h1 class ="header">Api Demo</h1>
+<div class="productContainer" #x>
+
+    <div *ngFor="let val of data" >
+        <div class="product" >
+        <img src="{{val.image}}" alt="{{val.title}}" height="250px" width="300px">
+
+        <h1 class="font">{{val.title}}</h1>
+        <p>{{val.price}}</p>
+
+        </div>
+    </div>
+</div>
