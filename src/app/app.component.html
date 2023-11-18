@@ -1,4 +1,4 @@
-<h1 class ="header">Api Demo</h1>
+<!-- <h1 class ="header">Api Demo</h1>
 <div class="productContainer" #x>
 
     <div *ngFor="let val of data" >
@@ -10,4 +10,11 @@
 
         </div>
     </div>
-</div>
+</div> -->
+
+
+<h1>Pipes Demo</h1>
+<h1>{{title | pvc :'hello' : 'bye'}}</h1>
+<p>Price details are : {{person | json}}</p>
+<p>object details are : {{person | json}}</p>
+<p>{{d | date : 'dd/mm/yyyy'}}</p>

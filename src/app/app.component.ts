@@ -6,7 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Api';
+  title = 'Angulart is easy';
+  price: number = 200;
+  person ={
+    name: 'angular',
+    type: 'easy'
+  }
+  d=new Date()
   
   constructor() {
     this.fetchData(this.url)
@@ -14,13 +20,34 @@ export class AppComponent {
   }
 
   data:any;
-  url="https://fakestoreapi.com/products";
+  url:string ="https://fakestoreapi.com/products";
 
-  fetchData(url: string) {
-    fetch(url).then((response) => {
-      console.log(response); return response.json()}).then((data) => {
-        this.data = data;
-      })
-    .catch((err)=>alert(err))
-  }
+  // fetchData(url: string) {
+  //   fetch(url).then((response) => {
+  //     console.log(response); return response.json()}).then((data) => {
+  //       this.data = data;
+  //     })
+  //   .catch((err)=>alert(err))
+  // }
+
+  async fetchData(url: string) {
+    try {
+       const response = await fetch(url)
+    console.log(response)
+    if (response.ok)
+    {
+      const data = await response.json();
+          this.data = data;
+
+    }
+    else
+    {
+      console.log("error");
+      }
+    }
+    catch (err)
+    {
+      console.log(err)
+    }
+    }
 }
